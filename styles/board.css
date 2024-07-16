@@ -76,27 +76,27 @@ input:checked + label .description {
     transform: translateY(0) !important;
 }
 .board[for="b1"] {
-    background-image: url('/imgs/jogadores/mandela1.png');
+    background-image: url('../imgs/jogadores/mandela1.png');
     background-size: cover;
     background-position: center;
 }
 .board[for="b2"] {
-    background-image: url('/imgs/jogadores/alex1.png');
+    background-image: url('../imgs/jogadores/alex1.png');
     background-size: cover;
     background-position: center;
 }
 .board[for="b3"] {
-    background-image: url('/imgs/jogadores/julio1.png');
+    background-image: url('../imgs/jogadores/julio1.png');
     background-size: cover;
     background-position: center;
 }
 .board[for="b4"] {
-    background-image: url('/imgs/jogadores/fabio1.png');
+    background-image: url('../imgs/jogadores/fabio1.png');
     background-size: cover;
     background-position: center;
 }
 .board[for="b5"] {
-    background-image: url('/imgs/jogadores/gabi1.png');
+    background-image: url('../imgs/jogadores/gabi1.png');
     background-size: cover;
     background-position: center;
 }
@@ -106,7 +106,7 @@ input:checked + label .description {
     background-position: center;
 }
 .board[for="b7"] {
-    background-image: url('/imgs/jogadores/jana1.png');
+    background-image: url('../imgs/jogadores/jana1.png');
     background-size: cover;
     background-position: center;
 }

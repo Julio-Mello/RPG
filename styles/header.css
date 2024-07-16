@@ -5,7 +5,7 @@
     width: 100%;
     min-height: 150px;
     box-shadow: 0 5px 10px var(--cor-azul-jampa);
-    background: url(/imgs/golarion-map.jpg.webp);
+    background: url(../imgs/golarion-map.jpg.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

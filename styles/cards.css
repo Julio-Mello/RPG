@@ -40,13 +40,13 @@
     backface-visibility: hidden;
 }
 .card .card-front{
-    background: url('/imgs/jogadores/gabi1.png');
+    background: url('../imgs/jogadores/gabi1.png');
     background-size: cover;
     background-position: center;
     border-radius: 8px;
 }
 .card .card-back{
-    background: url('/imgs/jogadores/gabi2.png');
+    background: url('../imgs/jogadores/gabi2.png');
     background-size: cover;
     background-position: center;
     border-radius: 8px;
