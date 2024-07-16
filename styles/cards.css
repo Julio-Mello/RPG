@@ -1,0 +1,62 @@
+.card-box{
+    margin: 20px 0 60px 0;
+    display: block;
+    height: 400px;
+    width: 300px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.card-input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+.card-input[type="checkbox"]::after{
+    font-family: "Font Awesome 6 Free";
+    content: "\f2f1";
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--cor-laranja);
+    padding: 1px;
+}
+ :checked + .card{
+    transform: rotateX(180deg);
+}
+.card{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all .5s;
+    z-index: 1;
+}
+.card #card-face{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+.card .card-front{
+    background: url('/imgs/jogadores/gabi1.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+.card .card-back{
+    background: url('/imgs/jogadores/gabi2.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    transform: rotateX(180deg);
+}
+.card-box:hover .card{
+    transform: rotateX(20deg);
+    box-shadow: 0 20px 20px rgba(250, 250, 250, 0.5);
+}
+.card-box:hover :checked + .card{
+    transform: rotateX(160deg);
+    box-shadow: 0 20px 20px rgba(250, 250, 250, 0.5);
+}

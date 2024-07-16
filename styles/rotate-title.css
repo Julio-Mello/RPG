@@ -1,0 +1,51 @@
+.rotate{
+    position: static;
+    left: 0;
+    top: 250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    counter-reset: menucounter;
+}
+.rotate-item{
+    position: relative;
+    cursor: pointer;
+}
+.rotate-item-title{
+    position: relative;
+    display: block;
+    pointer-events: none;
+}
+h1{
+    font-family: var(--font-title);
+    letter-spacing: 0.5rem;
+    color: var(--cor-laranja);
+    font-size: 3rem;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: var(--cor-marron-escuro);
+}
+.rotate-item > div:nth-child(1) h1{
+    will-change: transform;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    transition-delay: calc(0.05s * var(--index));
+    transform-origin: bottom;
+    display: inline-block;
+}
+.rotate-item > div:nth-child(2) h1{
+    will-change: transform;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    transition-delay: calc(0.05s * var(--index));
+    transform-origin: top;
+    transform: translate3d(0, 100%, 0) rotateX(-90deg);
+    display: inline-block;
+}
+.rotate-item:hover > div:nth-child(1) h1{
+    transform: translate3d(0, -100%, 0) rotateX(-90deg);
+}
+.rotate-item:hover > div:nth-child(2) h1{
+    transform: translate3d(0, 0%, 0) rotateX(0deg);
+}

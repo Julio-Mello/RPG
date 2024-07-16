@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Kode+Mono:wght@400..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('styles/index.css');
+@import url('styles/header.css');
+@import url('styles/header-ror.css');
+@import url('styles/header-pc.css');
+@import url('styles/rotate-title.css');
+@import url('styles/audio.css');
+@import url('styles/cards.css');
+@import url('styles/board.css');
+@import url('styles/scrollbar.css');
+@import url('styles/ror.css');
+@import url('styles/sidebar-ror.css');
+@import url('styles/pc.css');
+
+@font-face {
+    font-family: 'OldLondon';
+    src: url('fonts/OldLondon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'linLibertine';
+    src: url('fonts/LinLibertine_aSZI.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exmouth';
+    src: url('fonts/exmouth_.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+:root{
+    --cor-background: #501e04;
+    --cor-marron-escuro: #23181A;
+    --cor-marron: #7A450F;
+    --cor-marron-claro: #A45A49;
+    --cor-laranja: #FA8C1E;
+    --cor-bege: #f1ddb9;
+    --cor-branca: #eaeef0;
+    --cor-border: #edf1f4;
+    --cor-azul-jampa: #97d4d9;
+
+    --font-nav: 'linLibertine', serif;
+    --font-title: 'OldLondon', serif;
+    --font-subtitle: 'Spectral SC', serif;
+    --font-text: 'Alegreya Sans SC', sans-serif;
+    --font-letter: 'Exmouth', serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background: var(--cor-background);
+    font-family: var(--font-text);
+    font-size: 1rem;
+    overflow: auto;
+    overflow-x: hidden;
+}

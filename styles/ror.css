@@ -1,0 +1,138 @@
+.box-ror{
+    background-color: var(--cor-marron-escuro);
+    height: 100%;
+    min-width: 200px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 220px;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    transition: 1s;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.main-sectionror{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-text);
+    color: var(--cor-bege);
+}
+.subtitle-campain{
+    font-family: var(--font-subtitle);
+    font-size: 1.5rem;
+    color: var(--cor-laranja);
+    margin: 10px 0;
+}
+.img-7star{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    align-self: center;
+    margin: 20px;
+}
+#session1, #session2, #session3,#session4, #session5, #session6,#session7, #session8, #session9,#session10, #session11, #session12, #session13, #session14,
+#session15, #session16,#session17, #session18, #session19, #session20, #session21, #session22, #session23, #session24, #session25, #session26, #session27, #session28, #session29, #session30, #session31, #session32,#session33, #session34, #session35, #session36, #session37, #session38, #session39, #session40, #session41, #session42, #session43, #session44, #session45, #session46, #session47, #session48, #session49,#session50, #session51, #session52, #session53, #session54, #session55, #session56, #session57, #session58, #session59, #session60, #session61, #session62, #session63, #session64, #session65, #session66, #session67, #session68, #session69, #session70,
+#session71, #session72, #session73, #session74, #session75, #session76, #session77,#session78, #session79, #session80, #session81, #session82, #session83, #session84, #session85, #session86, #session87, #session88, #session89, #session90, #session91,
+#session92, #session93, #session94, #session95, #session96, #session97, #session98,
+#session99
+{
+    font-family: var(--font-subtitle);
+    font-size: .8rem;
+    color: var(--cor-branca);
+    align-self: flex-start;
+    margin: 20px;
+}
+.content-ror__paragraph{
+    text-align: justify;
+    text-indent: 2rem;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+}
+.frame-ror{
+    margin: 20px 0;
+}
+.img-ror{
+    border-radius: 10px;
+}
+.frame-legend{
+    font-size: .8rem;
+    color: var(--cor-azul-jampa);
+}
+.song-lyrics{
+    display: flex;
+    flex-direction: column;
+}
+.name-song{
+    margin-bottom: 10px;
+    font-family: var(--font-subtitle);
+    color: var(--cor-azul-jampa);
+}
+.song-color{
+    color: var(--cor-laranja);
+}
+.right-frame-ror{
+    display: block;
+    float: right;
+}
+.img-float__right{
+    height: 200px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 0 0 20px 20px;
+}
+.left-frame-ror{
+    display: block;
+    float: left;
+}
+.img-float__left{
+    height: 200px;
+    width: 150px;
+    border-radius: 10px;
+    margin: 0 20px 20px 0;
+}
+.content-ror__img{
+    height: 200px;
+    width: 200px;
+}
+.letter{
+    position: relative;
+    width: 60%;
+    margin: 10px 0;
+    font-family: var(--font-letter);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: 2px;
+    color: var(--cor-branca);
+    text-align: justify;
+}
+.letter-text{
+    text-indent: 2rem;
+}
+.content-ror__itens{
+    font-family: var(--font-nav);
+    color: var(--cor-border);
+}
+.content-ror__emphasis{
+    color: var(--cor-azul-jampa);
+}
+@media(max-width: 600px){
+    .frame-ror{
+        align-self: flex-start;
+    }
+    .img-ror{
+        height: 200px;
+        width: 320px;
+    }
+    .letter{
+        width: 100%;
+    }
+}

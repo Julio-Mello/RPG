@@ -1,0 +1,269 @@
+.header-pc{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 150px;
+    box-shadow: 0 5px 10px var(--cor-azul-jampa);
+    background: url(/imgs/sandpoint-map-header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+.header-pc .container-pc{
+    display: flex;
+    align-items: center;
+    justify-content:end;
+}
+.header-pc .logo img{
+    position: fixed;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    top: 0;
+    left: 0;
+}
+.header-pc .menu .head{
+    display: none;
+}
+.header-pc .menu > ul > li{
+    display: inline-block;
+}
+.header-pc .menu > ul > li:not(:last-child){
+    margin-right: 40px;
+}
+.dropdown{
+    padding-right: 10px;
+}
+.header-pc .menu .dropdown{
+    position: relative;
+}
+.header-pc .menu a{
+    font-family: var(--font-nav);
+    color: var(--cor-marron-escuro);
+    font-size: 1.5rem;
+    line-height: 1.25;
+    display: block;
+}
+.header-pc .menu > ul > li > a{
+    padding: 15px;
+}
+.header-pc .menu > ul > .dropdown > a{
+    padding-right: 1rem;
+}
+.header-pc .menu i{
+    position: absolute;
+    font-size: 1rem;
+    pointer-events: none;
+    user-select: none;
+    color: var(--cor-laranja);
+    top: calc(50% - 8px);
+}
+.header-pc .menu > ul > li > i{
+    right: 0;
+}
+.header-pc .menu .sub-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    padding: 15px 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+.header-pc .menu li:hover > .sub-menu{
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+.sub-menu__list:hover{
+    background-color: rgba(255, 255, 255, 0.03);
+    border-top: 3px solid rgba(255, 255, 255, 0.04);
+    border-left: 3px solid rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    backdrop-filter: blur (10px);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+    padding: 8px;
+}
+.header-pc .menu .sub-menu .dropdown > a{
+    padding-right: 34px;
+}
+.header-pc .menu .sub-menu span{
+    background-image: linear-gradient( #97d4d9,  #5ed2dc,  #2bc4d2);
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.5s ease;
+}
+.header-pc .menu .sub-menu li:hover > a > span{
+    background-size: 100% 1px;
+}
+.sub-menu__name{
+    color: var(--cor-bege);
+    font-family: var(--font-subtitle);
+    font-size: 1.25rem;
+}
+.header-right{
+    display: flex;
+}
+.header-right > *{
+    margin-left: 25px;
+}
+.header-right .open-menu-btn{
+    display: none;
+}
+.logo-header{
+    height: 50px;
+    width: 100px;
+    transform: translateY(30px);
+    margin-left: 38vw;
+}
+@media(max-width: 991px){
+    .header-pc{
+        padding: 12px 0;
+    }
+    .header-pc .menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 250px;
+        background-color: var(--cor-marron-escuro);
+        padding: 15px 30px 30px;
+        overflow-y: auto;
+        transform: translateX(100%);
+        z-index: 1;
+    }
+    .header-pc .menu a{
+        color: var(--cor-laranja);
+    }
+    .header-pc .menu.open{
+        transform: none;
+    }
+    .header-pc .menu .head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    .header-pc .menu .close-menu-btn{
+        position: relative;
+        height: 35px;
+        width: 35px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .header-pc .menu .close-menu-btn::before,
+    .header-pc .menu .close-menu-btn::after{
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 80%;
+        background-color: var(--cor-laranja);
+    }
+    .header-pc .menu .close-menu-btn::before{
+        transform: rotate(45deg);
+    }
+    .header-pc .menu .close-menu-btn::after{
+        transform: rotate(-45deg);
+    }
+    .header-pc .logo img{
+        height: 50px;
+        width: 50px;
+        margin-right: 8px;
+    }
+    .header-pc .menu > ul > li{
+        display: block;
+    }
+    .header-pc .menu > ul > li:not(:last-child){
+        margin-right: 0;
+    }
+    .header-pc .menu > ul > li > a{
+        padding: 1.25rem 0;
+    }
+    .header-pc .menu i{
+        top: 24px;
+        height: 30px;
+        width: 30px;
+        border: 1px solid var(--cor-border);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+    .header-pc .menu .dropdown.active > i{
+        background-color: var(--cor-marron);
+        transform: rotate(180deg);
+    }
+    .header-pc .menu .sub-menu{
+        position: static;
+        width: 100%;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition: none;
+        box-shadow: none;
+        display: none;
+    }
+    .header-pc .menu .dropdown.active > .sub-menu{
+        display: block;
+    }
+    .header-pc .menu .sub-menu a{
+        padding: 12px 0 12px 15px;
+    }
+    .header-pc .menu .sub-menu span{
+        background-image: none;
+    }
+    .header-pc .menu .sub-menu i{
+        right: 0;
+        transform: none;
+    }
+    .header-right .open-menu-btn{
+        position: relative;
+        height: 40px;
+        width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+    }
+    .header-right .open-menu-btn .line{
+        position: absolute;
+        height: 2px;
+        width: 30px;
+        background-color: var(--cor-laranja);
+    }
+    .header-right .open-menu-btn .line-1{
+        transform: translateY(-8px);
+    }
+    .header-right .open-menu-btn .line-3{
+        transform: translateY(8px);
+    }
+    .sub-menu__list:hover{
+        padding: 8px;
+        background-color: var(--cor-marron);
+        border: 1px solid var(--cor-border);
+        border-radius: 8px;
+    }
+    .logo-header{
+        transform: translateY(65px);
+    }
+}

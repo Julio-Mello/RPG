@@ -1,0 +1,9 @@
+::-webkit-scrollbar{
+    width: 0.3em;
+    border-radius: 0.2em;
+    background-color: var(--cor-marron-escuro);
+}
+::-webkit-scrollbar-thumb{       
+    background: linear-gradient(to bottom, #97d4d9, #eaeef0, #f1ddb9, #FA8C1E);
+    border-radius: 0.2em;
+}

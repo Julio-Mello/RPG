@@ -1,0 +1,205 @@
+.header-ror{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 150px;
+    box-shadow: 0 5px 10px var(--cor-azul-jampa);
+    background: url(/imgs/ror/varisia_map.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+.header-ror .container{
+    display: flex;
+    align-items: center;
+    justify-content:space-between
+}
+.logo{
+    display: flex;
+}
+.header-ror .logo img{
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    top: 0;
+    left: 0;
+    animation: rotate 3s infinite linear;
+}
+.header-ror .menu .head{
+    display: none;
+}
+.header-ror .menu > ul > li{
+    display: inline-block;
+}
+.header-ror .menu > ul > li:not(:last-child){
+    margin-right: 40px;
+}
+.header-ror .menu .dropdown{
+    position: relative;
+}
+.header-ror .menu a{
+    font-family: var(--font-nav);
+    color: var(--cor-branca);
+    font-size: 1.5rem;
+    line-height: 1.25;
+    display: block;
+}
+.header-ror .menu > ul > li > a{
+    padding: 15px;
+}
+.header-ror .menu > ul > .dropdown > a{
+    padding-right: 1rem;
+}
+.header-ror .menu i{
+    position: absolute;
+    font-size: 1rem;
+    pointer-events: none;
+    user-select: none;
+    color: var(--cor-laranja);
+    top: calc(50% - 8px);
+}
+.header-ror .menu > ul > li > i{
+    right: 0;
+}
+.header-ror .menu .sub-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    padding: 15px 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    visibility: hidden;
+    opacity: 0;
+}
+.header-ror .menu li:hover > .sub-menu{
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+.header-ror .menu .sub-menu .dropdown > a{
+    padding-right: 34px;
+}
+.header-ror .menu .sub-menu span{
+    background-image: linear-gradient( #97d4d9,  #5ed2dc,  #2bc4d2);
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.5s ease;
+}
+.header-ror .menu .sub-menu li:hover > a > span{
+    background-size: 100% 1px;
+}
+@keyframes rotate{
+    to{transform: rotate(360deg);}
+}
+@media(max-width: 991px){
+    .header-ror{
+        padding: 12px 0;
+    }
+    .header-ror .menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 250px;
+        background-color: var(--cor-marron-escuro);
+        padding: 15px 30px 30px;
+        overflow-y: auto;
+        transform: translateX(100%);
+        z-index: 1;
+    }
+    .header-ror .menu a{
+        color: var(--cor-laranja);
+    }
+    .header-ror .menu.open{
+        transform: none;
+    }
+    .header-ror .menu .head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    .header-ror .menu .close-menu-btn{
+        position: relative;
+        height: 35px;
+        width: 35px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .header-ror .menu .close-menu-btn::before,
+    .header-ror .menu .close-menu-btn::after{
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 80%;
+        background-color: var(--cor-laranja);
+    }
+    .header-ror .menu .close-menu-btn::before{
+        transform: rotate(45deg);
+    }
+    .header-ror .menu .close-menu-btn::after{
+        transform: rotate(-45deg);
+    }
+    .header-ror .logo img{
+        height: 50px;
+        width: 50px;
+        margin-right: 8px;
+    }
+    .header-ror .menu > ul > li{
+        display: block;
+    }
+    .header-ror .menu > ul > li:not(:last-child){
+        margin-right: 0;
+    }
+    .header-ror .menu > ul > li > a{
+        padding: 1.25rem 0;
+    }
+    .header-ror .menu i{
+        top: 24px;
+        height: 30px;
+        width: 30px;
+        border: 1px solid var(--cor-border);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+    .header-ror .menu .dropdown.active > i{
+        background-color: var(--cor-marron);
+        transform: rotate(180deg);
+    }
+    .header-ror .menu .sub-menu{
+        position: static;
+        width: 100%;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition: none;
+        box-shadow: none;
+        display: none;
+    }
+    .header-ror .menu .dropdown.active > .sub-menu{
+        display: block;
+    }
+    .header-ror .menu .sub-menu a{
+        padding: 12px 0 12px 15px;
+    }
+    .header-ror .menu .sub-menu span{
+        background-image: none;
+    }
+    .header-ror .menu .sub-menu i{
+        right: 0;
+        transform: none;
+    }
+}
